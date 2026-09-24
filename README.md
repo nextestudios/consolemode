@@ -79,6 +79,18 @@ The previous PowerShell + WPF implementation (1.2 and earlier) lives on the [`le
 
 You can also restore anytime from the tray (*Restore setup* / *Show window*). With black overlays, **ESC** dismisses the curtains.
 
+## Command line and local control API
+
+- `ConsoleMode.exe --start` enters console mode with the saved setup; `--stop` restores the desktop (same as the tray's Restore). Both hand the request to the running instance.
+- Other tools on the PC (a remote-control agent running as a service, scripts, a Stream Deck) can use the named pipe `\\.\pipe\ConsoleMode.Control` while the app is running. Send one JSON line, get one back:
+
+```
+→ {"cmd":"status"}          // or "start", "stop", "show"
+← {"ok":true,"active":true,"restoring":false,"mode":"xboxMode","version":"1.4.0"}
+```
+
+`stop` uses the app's own restore, so it works in every mode (Big Picture, Playnite and Xbox). Only the signed-in user and LocalSystem can connect; nothing is exposed to the network.
+
 ## Optional extras
 
 ### HDR

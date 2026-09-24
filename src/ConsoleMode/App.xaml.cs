@@ -13,6 +13,7 @@ public partial class App : Application
 
     private MainWindow? _window;
     private TrayService? _tray;
+    private ControlPipeService? _control;
     private Mutex? _instanceMutex;
     private EventWaitHandle? _showSignal;
     private EventWaitHandle? _startSignal;
@@ -81,6 +82,7 @@ public partial class App : Application
             MainWindowInstance = _window;
             _tray = new TrayService(_window, ViewModel);
             ListenForSignals();
+            _control = new ControlPipeService(ViewModel, _window.DispatcherQueue, () => _tray?.ShowWindow());
 
             if (!autoStart && !trayOnly) _window.Activate();
             await ViewModel.InitializeAsync(interactive: !autoStart && !trayOnly);
