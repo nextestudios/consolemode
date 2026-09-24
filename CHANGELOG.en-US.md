@@ -2,6 +2,10 @@
 
 English (US) release notes, mirroring CHANGELOG.md (Brazilian Portuguese). Before publishing a version, add a `## [VERSION]` section to **both** files: the workflow publishes the section matching the tag from each one and fails if either is missing.
 
+## [1.5.1]
+### What's new
+- Local control API: while the app is running, other tools on the PC (remote-control agents running as a service, scripts, a Stream Deck) can drive console mode through the `\\.\pipe\ConsoleMode.Control` named pipe with the JSON commands `status`, `start`, `stop` and `show`. Only the signed-in user and LocalSystem can connect; nothing is exposed to the network.
+
 ## [1.5.0]
 ### What's new
 - Full navigation with a PlayStation (DualSense / DualShock 4) or Xbox controller, on the home screen and in Settings: D-pad or left stick moves focus, ✕ / A selects, ○ / B closes lists and backs out of Settings, Options / Start opens Settings. In the first-run tour, ✕ / A goes on and ○ / B skips it.
