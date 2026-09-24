@@ -2,6 +2,18 @@
 
 Notas em português do Brasil; a versão em inglês (Estados Unidos) fica em `CHANGELOG.en-US.md`. Antes de publicar uma versão, adicione uma seção `## [VERSÃO]` com o changelog daquela versão **nos dois arquivos**. O workflow publica as duas seções correspondentes à tag na mesma release e falha se faltar alguma.
 
+## [1.5.0]
+### Novidades
+- Navegação completa com controle de PlayStation (DualSense / DualShock 4) ou Xbox, na tela inicial e nos Ajustes: direcional ou analógico esquerdo movem o foco, ✕ / A seleciona, ○ / B fecha listas e volta dos Ajustes, Options / Start abre os Ajustes. No tutorial inicial, ✕ / A avança e ○ / B pula.
+- `ConsoleMode.exe --stop` sai do modo console e restaura a Área de Trabalho pela linha de comando (útil para ferramentas remotas e scripts), igual ao "Restaurar setup" da bandeja.
+
+### Correções
+- Os itens do menu da bandeja (Mostrar janela, Entrar no modo console, Restaurar setup, Sair) voltaram a funcionar.
+- Ao entrar no modo console, o aplicativo espera a TV realmente ligar (com novas tentativas) antes de desligar as outras telas. Se ela não ligar, avisa e volta tudo ao normal, em vez de deixar você sem imagem.
+- Fechar o Big Picture volta a restaurar a Área de Trabalho mesmo quando a janela normal do Steam estava aberta.
+- As etiquetas do resumo na tela inicial passam para a linha de baixo quando não cabem, em vez de ficarem cortadas.
+- O atalho de 1 clique agora se chama "Console Mode 1 Click" e é criado ao lado do atalho normal do aplicativo, em vez de substituí-lo.
+
 ## [1.5.0-beta.4]
 ### Correções
 - O atalho de 1 clique agora se chama "Console Mode 1 Click" e é criado ao lado do atalho normal do aplicativo, em vez de substituí-lo.

@@ -2,6 +2,18 @@
 
 English (US) release notes, mirroring CHANGELOG.md (Brazilian Portuguese). Before publishing a version, add a `## [VERSION]` section to **both** files: the workflow publishes the section matching the tag from each one and fails if either is missing.
 
+## [1.5.0]
+### What's new
+- Full navigation with a PlayStation (DualSense / DualShock 4) or Xbox controller, on the home screen and in Settings: D-pad or left stick moves focus, ✕ / A selects, ○ / B closes lists and backs out of Settings, Options / Start opens Settings. In the first-run tour, ✕ / A goes on and ○ / B skips it.
+- `ConsoleMode.exe --stop` leaves console mode and restores the desktop from the command line (handy for remote tools and scripts), the same as the tray's "Restore setup".
+
+### Fixes
+- The tray menu items (Show window, Enter console mode, Restore setup, Exit) work again.
+- When entering console mode, the app waits for the TV to actually turn on (with retries) before turning the other screens off. If it doesn't, it says so and puts everything back instead of leaving you without a picture.
+- Closing Big Picture restores the desktop again even when the regular Steam window was open.
+- The home screen summary chips wrap to a new line when they don't fit instead of being cut off.
+- The one-click shortcut is now called "Console Mode 1 Click" and is created next to the regular app shortcut instead of replacing it.
+
 ## [1.5.0-beta.4]
 ### Fixes
 - The one-click shortcut is now called "Console Mode 1 Click" and is created next to the regular app shortcut instead of replacing it.
