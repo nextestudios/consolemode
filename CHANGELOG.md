@@ -2,6 +2,13 @@
 
 Notas em português do Brasil; a versão em inglês (Estados Unidos) fica em `CHANGELOG.en-US.md`. Antes de publicar uma versão, adicione uma seção `## [VERSÃO]` com o changelog daquela versão **nos dois arquivos**. O workflow publica as duas seções correspondentes à tag na mesma release e falha se faltar alguma.
 
+## [1.5.0-beta.2]
+### Correções
+- Os itens do menu da bandeja (Mostrar janela, Entrar no modo console, Restaurar setup, Sair) voltaram a funcionar.
+- Ao entrar no modo console, o aplicativo espera a TV realmente ligar (com novas tentativas) antes de desligar as outras telas. Se ela não ligar, avisa e volta tudo ao normal, em vez de deixar você sem imagem.
+- Fechar o Big Picture volta a restaurar a Área de Trabalho mesmo quando a janela normal do Steam estava aberta.
+- Navegação com controle nos Ajustes chega também às opções fora da área visível da página.
+
 ## [1.5.0-beta.1]
 ### Novidades
 - Navegação completa com controle de PlayStation (DualSense / DualShock 4) ou Xbox: direcional ou analógico esquerdo movem o foco, ✕ / A seleciona, ○ / B fecha listas e volta dos Ajustes, Options / Start abre os Ajustes. No tutorial inicial, ✕ / A avança e ○ / B pula.

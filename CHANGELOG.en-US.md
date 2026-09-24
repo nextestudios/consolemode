@@ -2,6 +2,13 @@
 
 English (US) release notes, mirroring CHANGELOG.md (Brazilian Portuguese). Before publishing a version, add a `## [VERSION]` section to **both** files: the workflow publishes the section matching the tag from each one and fails if either is missing.
 
+## [1.5.0-beta.2]
+### Fixes
+- The tray menu items (Show window, Enter console mode, Restore setup, Exit) work again.
+- When entering console mode, the app waits for the TV to actually turn on (with retries) before turning the other screens off. If it doesn't, it says so and puts everything back instead of leaving you without a picture.
+- Closing Big Picture restores the desktop again even when the regular Steam window was open.
+- Controller navigation in Settings also reaches options scrolled out of view.
+
 ## [1.5.0-beta.1]
 ### What's new
 - Full navigation with a PlayStation (DualSense / DualShock 4) or Xbox controller: D-pad or left stick moves focus, ✕ / A selects, ○ / B closes lists and backs out of Settings, Options / Start opens Settings. In the first-run tour, ✕ / A goes on and ○ / B skips it.
