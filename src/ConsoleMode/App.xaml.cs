@@ -132,7 +132,7 @@ public partial class App : Application
         _signalWaits.Add(ThreadPool.RegisterWaitForSingleObject(_stopSignal, (_, _) =>
             _window?.DispatcherQueue.TryEnqueue(async () =>
             {
-                if (ViewModel?.IsConsoleActive == true) await ViewModel.RestoreNowAsync();
+                if (ViewModel is not null) await ViewModel.StopConsoleAsync();
             }), null, Timeout.Infinite, executeOnlyOnce: false));
     }
 }

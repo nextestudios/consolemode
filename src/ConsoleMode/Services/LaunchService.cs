@@ -24,6 +24,46 @@ public sealed class LaunchService
 
     public bool IsPlayniteAvailable() => GetPlaynitePath() is not null;
 
+    /// <summary>
+    /// Asks the fullscreen front-end to quit, so a restore requested from outside (control API,
+    /// --stop) doesn't leave Big Picture / Playnite sitting on the desk monitor. Xbox mode has no
+    /// window of its own to close. Returns once the window is gone or after <paramref name="timeoutMs"/>.
+    /// </summary>
+    public bool CloseFrontEnd(string mode, ConsoleRuntimeState state, int timeoutMs = 8000)
+    {
+        if (mode == "xboxMode") return true;
+        var handles = GetFullscreenHandles(mode);
+        if (mode == "playnite")
+        {
+            foreach (var p in Process.GetProcessesByName("Playnite.FullscreenApp"))
+            {
+                try { p.CloseMainWindow(); } catch { /* best effort */ }
+            }
+        }
+        else
+        {
+            // Steam's own URL leaves Big Picture the clean way (back to the desktop client)
+            try { ProcessRunner.StartDetached("steam://close/bigpicture"); }
+            catch (Exception ex) { AppLog.Write($"Fechar Big Picture: {ex.Message}"); }
+        }
+
+        var deadline = Environment.TickCount64 + timeoutMs;
+        var nudged = false;
+        while (Environment.TickCount64 < deadline)
+        {
+            Thread.Sleep(500);
+            if (!IsFullscreenActive(mode, state)) return true;
+            // halfway through and still there: close the window itself
+            if (!nudged && Environment.TickCount64 > deadline - timeoutMs / 2)
+            {
+                nudged = true;
+                foreach (var h in handles.Concat(GetFullscreenHandles(mode)).Distinct())
+                    NativeWindows.PostMessage(h, NativeWindows.WM_CLOSE, 0, 0);
+            }
+        }
+        return !IsFullscreenActive(mode, state);
+    }
+
     public string? GetPlaynitePath()
     {
         var candidates = new List<string>();

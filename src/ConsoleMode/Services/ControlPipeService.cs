@@ -126,7 +126,7 @@ public sealed class ControlPipeService : IDisposable
                     return Reply(false, "no game display configured");
                 return Reply(true);
             case "stop":
-                if (_vm.IsConsoleActive) await _vm.RestoreNowAsync();
+                await _vm.StopConsoleAsync();
                 return Reply(!_vm.IsConsoleActive, _vm.IsConsoleActive ? "restore failed" : null);
             case "show":
                 _showWindow();
