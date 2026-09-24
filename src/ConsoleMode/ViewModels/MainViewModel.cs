@@ -736,6 +736,7 @@ public partial class MainViewModel : ObservableObject
     }
 
     [RelayCommand]
+    [RelayCommand]
     private void EndTour()
     {
         TourStep = 0;
