@@ -22,6 +22,7 @@ Typical setup: two desk monitors and a distant HDMI TV that was off. Console Mod
 - Optional **HDR** on the focus monitor and **VRR** (Windows setting)
 - Optional global **FPS limit** via RivaTuner (RTSS)
 - Audio routing, including “use output when connected” (e.g. TV HDMI)
+- **Controller navigation** from the couch: PlayStation (DualSense / DualShock 4) or Xbox — D-pad or left stick moves, ✕ / A selects, ○ / B goes back, Options / Start opens Settings
 - System tray icon to restore your desktop layout or reopen the app
 - **Installer** (per-user, no admin) or a **portable single-file** `.exe` — both announce new versions from GitHub Releases
 - Interface in **Brazilian Portuguese** or **English**, switchable in Settings without restarting
@@ -48,7 +49,7 @@ Typical setup: two desk monitors and a distant HDMI TV that was off. Console Mod
    - **`ConsoleMode-Setup-x64.exe`** (recommended) — per-user install, no admin, Start menu entry, optional one-click desktop shortcut and start with Windows; data in `%LOCALAPPDATA%\ConsoleMode`
    - **`ConsoleMode-Portable-x64.exe`** — a single exe that keeps its data in `ConsoleMode_Data\` next to it
 2. On first launch a short tour shows the screen map: pick the screen you play on (the others turn off)
-3. From then on it is one click: **Play now**, or the **Console Mode** desktop shortcut (Settings → Create shortcut). The first time with a new game screen, the TV asks "Can you see this screen?" and everything reverts on its own if nobody answers (mouse, keyboard or Xbox/PlayStation controller)
+3. From then on it is one click: **Play now**, or the **Console Mode 1 Click** desktop shortcut (Settings → Create shortcut). The first time with a new game screen, the TV asks "Can you see this screen?" and everything reverts on its own if nobody answers (mouse, keyboard or Xbox/PlayStation controller)
 4. When you are done, exit Big Picture / Playnite (or restore manually in Xbox mode)
 5. New versions are announced in the app from GitHub Releases (installed: updates silently; portable: swaps the exe)
 
@@ -145,6 +146,7 @@ Transforme seu PC Windows em um **console de jogos** com um clique: foque na TV,
 - **HDR** opcional no monitor de foco e **VRR** (ajuste do Windows)
 - **Limite de FPS** opcional via RivaTuner (RTSS)
 - Roteamento de áudio, inclusive “usar ao conectar” (ex.: HDMI da TV)
+- **Navegação com controle** do sofá: PlayStation (DualSense / DualShock 4) ou Xbox — direcional ou analógico esquerdo movem, ✕ / A seleciona, ○ / B volta, Options / Start abre os Ajustes
 - Ícone na bandeja para restaurar o layout ou reabrir o app
 - **Instalador** (por usuário, sem admin) ou **executável portátil em um único `.exe`** — os dois avisam das versões novas pelo GitHub
 - Interface em **português do Brasil** ou **inglês**, trocável em Ajustes sem reiniciar
@@ -171,7 +173,7 @@ Transforme seu PC Windows em um **console de jogos** com um clique: foque na TV,
    - **`ConsoleMode-Setup-x64.exe`** (recomendado) — instala por usuário, sem admin, com menu Iniciar e, se quiser, atalho de 1 clique e iniciar com o Windows; dados em `%LOCALAPPDATA%\ConsoleMode`
    - **`ConsoleMode-Portable-x64.exe`** — um único exe que guarda os dados em `ConsoleMode_Data\` ao lado dele
 2. Na primeira vez, um tour curto mostra o mapa das telas: escolha a tela onde você joga (as outras desligam)
-3. Depois é 1 clique: **Jogar agora**, ou o atalho **Modo Console** na Área de Trabalho (Ajustes → Criar atalho). Na primeira vez com uma tela de jogo nova, a TV pergunta "Está vendo esta tela?" e tudo volta sozinho se ninguém responder (mouse, teclado ou controle de Xbox/PlayStation)
+3. Depois é 1 clique: **Jogar agora**, ou o atalho **Console Mode 1 Click** na Área de Trabalho (Ajustes → Criar atalho). Na primeira vez com uma tela de jogo nova, a TV pergunta "Está vendo esta tela?" e tudo volta sozinho se ninguém responder (mouse, teclado ou controle de Xbox/PlayStation)
 4. Ao terminar, saia do Big Picture / Playnite (ou restaure manualmente no Modo Xbox)
 5. O app avisa das versões novas pelas releases do GitHub (instalado: atualiza sozinho; portátil: troca o exe)
 

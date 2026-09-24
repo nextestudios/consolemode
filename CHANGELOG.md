@@ -2,6 +2,25 @@
 
 Notas em português do Brasil; a versão em inglês (Estados Unidos) fica em `CHANGELOG.en-US.md`. Antes de publicar uma versão, adicione uma seção `## [VERSÃO]` com o changelog daquela versão **nos dois arquivos**. O workflow publica as duas seções correspondentes à tag na mesma release e falha se faltar alguma.
 
+## [1.5.0-beta.4]
+### Correções
+- O atalho de 1 clique agora se chama "Console Mode 1 Click" e é criado ao lado do atalho normal do aplicativo, em vez de substituí-lo.
+
+## [1.5.0-beta.3]
+### Correções
+- As etiquetas do resumo na tela inicial (modo, áudio, HDR, VRR…) passam para a linha de baixo quando não cabem, em vez de ficarem cortadas. Nomes muito longos terminam em reticências e aparecem inteiros ao passar o mouse.
+
+## [1.5.0-beta.2]
+### Correções
+- Os itens do menu da bandeja (Mostrar janela, Entrar no modo console, Restaurar setup, Sair) voltaram a funcionar.
+- Ao entrar no modo console, o aplicativo espera a TV realmente ligar (com novas tentativas) antes de desligar as outras telas. Se ela não ligar, avisa e volta tudo ao normal, em vez de deixar você sem imagem.
+- Fechar o Big Picture volta a restaurar a Área de Trabalho mesmo quando a janela normal do Steam estava aberta.
+- Navegação com controle nos Ajustes chega também às opções fora da área visível da página.
+
+## [1.5.0-beta.1]
+### Novidades
+- Navegação completa com controle de PlayStation (DualSense / DualShock 4) ou Xbox: direcional ou analógico esquerdo movem o foco, ✕ / A seleciona, ○ / B fecha listas e volta dos Ajustes, Options / Start abre os Ajustes. No tutorial inicial, ✕ / A avança e ○ / B pula.
+
 ## [1.4.0]
 ### Novidades
 - Interface em inglês (Estados Unidos), além do português do Brasil. O idioma é escolhido em Ajustes e muda na hora, sem reiniciar o aplicativo.
