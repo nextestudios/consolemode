@@ -2,6 +2,10 @@
 
 Notas em português do Brasil; a versão em inglês (Estados Unidos) fica em `CHANGELOG.en-US.md`. Antes de publicar uma versão, adicione uma seção `## [VERSÃO]` com o changelog daquela versão **nos dois arquivos**. O workflow publica as duas seções correspondentes à tag na mesma release e falha se faltar alguma.
 
+## [1.5.0-beta.4]
+### Correções
+- O atalho de 1 clique agora se chama "Console Mode 1 Click" e é criado ao lado do atalho normal do aplicativo, em vez de substituí-lo.
+
 ## [1.5.0-beta.3]
 ### Correções
 - As etiquetas do resumo na tela inicial (modo, áudio, HDR, VRR…) passam para a linha de baixo quando não cabem, em vez de ficarem cortadas. Nomes muito longos terminam em reticências e aparecem inteiros ao passar o mouse.

@@ -2,6 +2,10 @@
 
 English (US) release notes, mirroring CHANGELOG.md (Brazilian Portuguese). Before publishing a version, add a `## [VERSION]` section to **both** files: the workflow publishes the section matching the tag from each one and fails if either is missing.
 
+## [1.5.0-beta.4]
+### Fixes
+- The one-click shortcut is now called "Console Mode 1 Click" and is created next to the regular app shortcut instead of replacing it.
+
 ## [1.5.0-beta.3]
 ### Fixes
 - The summary chips on the home screen (mode, audio, HDR, VRR…) wrap to a new line when they don't fit instead of being cut off. Very long names end in an ellipsis and show in full on hover.
