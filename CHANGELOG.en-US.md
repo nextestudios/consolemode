@@ -2,6 +2,10 @@
 
 English (US) release notes, mirroring CHANGELOG.md (Brazilian Portuguese). Before publishing a version, add a `## [VERSION]` section to **both** files: the workflow publishes the section matching the tag from each one and fails if either is missing.
 
+## [1.5.0-beta.1]
+### What's new
+- Full navigation with a PlayStation (DualSense / DualShock 4) or Xbox controller: D-pad or left stick moves focus, ✕ / A selects, ○ / B closes lists and backs out of Settings, Options / Start opens Settings. In the first-run tour, ✕ / A goes on and ○ / B skips it.
+
 ## [1.4.0]
 ### What's new
 - English (United States) interface, in addition to Brazilian Portuguese. Pick the language in Settings; it switches right away, without restarting the app.

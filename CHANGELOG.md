@@ -2,6 +2,10 @@
 
 Notas em português do Brasil; a versão em inglês (Estados Unidos) fica em `CHANGELOG.en-US.md`. Antes de publicar uma versão, adicione uma seção `## [VERSÃO]` com o changelog daquela versão **nos dois arquivos**. O workflow publica as duas seções correspondentes à tag na mesma release e falha se faltar alguma.
 
+## [1.5.0-beta.1]
+### Novidades
+- Navegação completa com controle de PlayStation (DualSense / DualShock 4) ou Xbox: direcional ou analógico esquerdo movem o foco, ✕ / A seleciona, ○ / B fecha listas e volta dos Ajustes, Options / Start abre os Ajustes. No tutorial inicial, ✕ / A avança e ○ / B pula.
+
 ## [1.4.0]
 ### Novidades
 - Interface em inglês (Estados Unidos), além do português do Brasil. O idioma é escolhido em Ajustes e muda na hora, sem reiniciar o aplicativo.
