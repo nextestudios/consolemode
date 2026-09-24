@@ -154,8 +154,17 @@ public sealed class ControllerNavigator : IDisposable
         // Spatial (XY) search from the focused control, so closed ComboBoxes and the role selector
         // don't swallow the arrows the way they would with keyboard input.
         var options = new FindNextElementOptions { SearchRoot = root.Content };
-        if (FocusManager.FindNextElement(direction, options) is Control target)
-            target.Focus(FocusState.Keyboard);
+        var target = FocusManager.FindNextElement(direction, options) as Control;
+
+        // Settings scrolls: XY search can miss controls outside the viewport, so up/down fall
+        // back to tab order, which is top-to-bottom there and does reach them (Focus scrolls).
+        target ??= direction switch
+        {
+            FocusNavigationDirection.Down => FocusManager.FindNextElement(FocusNavigationDirection.Next, options) as Control,
+            FocusNavigationDirection.Up => FocusManager.FindNextElement(FocusNavigationDirection.Previous, options) as Control,
+            _ => null
+        };
+        target?.Focus(FocusState.Keyboard);
     }
 
     private void FocusDefault()
