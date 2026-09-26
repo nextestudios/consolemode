@@ -6,7 +6,7 @@ Transforme seu PC Windows em um **console de jogos** com um clique: foque na TV,
 
 ![Windows](https://img.shields.io/badge/Windows-10%2F11-blue)
 ![Version](https://img.shields.io/github/v/release/lippdev/consolemode?label=vers%C3%A3o&color=brightgreen)
-![License](https://img.shields.io/badge/licença-MIT-green)
+![Licença](https://img.shields.io/github/license/lippdev/consolemode)
 
 <img src="assets/console-mode.gif" alt="Os monitores da mesa desligam para a TV no HDMI; ao sair do Big Picture, a mesa volta sozinha." width="800">
 
@@ -65,4 +65,4 @@ Todos os detalhes nas [notas da versão](https://github.com/lippdev/consolemode/
 - **Feedback:** o botão ao lado de Ajustes no app, ou [este formulário](https://github.com/lippdev/consolemode/issues/new?template=feedback.yml). Uma ⭐ ajuda outros jogadores de sofá a encontrar o projeto.
 - Alguns antivírus podem acusar as ferramentas auxiliares incluídas; o código está todo aqui.
 
-Licença MIT · [Avisos de terceiros](THIRD_PARTY_NOTICES.md) · [Política de assinatura de código](docs/CODE_SIGNING.md)
+Licença [GNU Affero General Public License v3.0 only](LICENSE) · [Avisos de terceiros](THIRD_PARTY_NOTICES.md) · [Política de assinatura de código](docs/CODE_SIGNING.md)

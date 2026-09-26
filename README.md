@@ -6,7 +6,7 @@ Turn your Windows PC into a **game console** with one click: focus the TV, turn 
 
 ![Windows](https://img.shields.io/badge/Windows-10%2F11-blue)
 ![Version](https://img.shields.io/github/v/release/lippdev/consolemode?label=version&color=brightgreen)
-![License](https://img.shields.io/badge/license-MIT-green)
+![License](https://img.shields.io/github/license/lippdev/consolemode)
 
 <img src="assets/console-mode.gif" alt="Desk monitors turn off for a previously off HDMI TV; closing Big Picture restores the desk automatically." width="800">
 
@@ -65,4 +65,4 @@ All the details in the [release notes](https://github.com/lippdev/consolemode/re
 - **Feedback:** the button next to Settings in the app, or [this form](https://github.com/lippdev/consolemode/issues/new?template=feedback.yml). A ⭐ helps other couch gamers find the project.
 - Antivirus may flag the bundled helper tools; the source is all here.
 
-MIT License · [Third-party notices](THIRD_PARTY_NOTICES.md) · [Code signing policy](docs/CODE_SIGNING.md)
+[GNU Affero General Public License v3.0 only](LICENSE) · [Third-party notices](THIRD_PARTY_NOTICES.md) · [Code signing policy](docs/CODE_SIGNING.md)
