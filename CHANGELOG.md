@@ -4,7 +4,7 @@ Notas em português do Brasil; a versão em inglês (Estados Unidos) fica em `CH
 
 ## [Unreleased]
 ### Novidades
-- Ajustes → TV: o modo console liga a TV e troca para a entrada HDMI do PC, e pode colocá-la em espera ao restaurar. Primeiro caminho: Google TV / Android TV pela rede (ADB), sem instalar nada no PC. (#75)
+- Ajustes → TV: o modo console liga a TV e troca para a entrada HDMI do PC, e pode colocá-la em espera ao restaurar. Primeiro caminho: Google TV / Android TV pela rede (ADB), sem instalar nada no PC. (#93)
 
 ## [1.5.0]
 ### Novidades

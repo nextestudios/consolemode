@@ -4,7 +4,7 @@ English (US) release notes, mirroring CHANGELOG.md (Brazilian Portuguese). Befor
 
 ## [Unreleased]
 ### What's new
-- Settings → TV: console mode turns the TV on and switches it to the PC's HDMI input, and can put it in standby on restore. First route: Google TV / Android TV over the network (ADB), nothing to install on the PC. (#75)
+- Settings → TV: console mode turns the TV on and switches it to the PC's HDMI input, and can put it in standby on restore. First route: Google TV / Android TV over the network (ADB), nothing to install on the PC. (#93)
 
 ## [1.5.0]
 ### What's new
