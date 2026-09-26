@@ -1,4 +1,3 @@
-using System.Net.Sockets;
 using ConsoleMode.Models;
 
 namespace ConsoleMode.Services.Tv;
@@ -10,9 +9,6 @@ namespace ConsoleMode.Services.Tv;
 /// </summary>
 public sealed class AndroidTvController : ITvController
 {
-    /// <summary>A TV woken by Wake-on-LAN takes a while to bring its network (and adbd) up.</summary>
-    private static readonly TimeSpan WakeWait = TimeSpan.FromSeconds(20);
-
     public async Task TurnOnAsync(TvControlConfig config, TimeSpan approvalTimeout, CancellationToken ct)
     {
         await using var adb = await ConnectAsync(config, approvalTimeout, wakeOnLan: true, ct);
@@ -31,46 +27,11 @@ public sealed class AndroidTvController : ITvController
         await adb.ShellAsync($"input keyevent {AdbProtocol.KeySleep}", ct);
     }
 
-    private static async Task<AdbClient> ConnectAsync(TvControlConfig config, TimeSpan approvalTimeout, bool wakeOnLan, CancellationToken ct)
+    private static Task<AdbClient> ConnectAsync(TvControlConfig config, TimeSpan approvalTimeout, bool wakeOnLan, CancellationToken ct)
     {
         if (string.IsNullOrWhiteSpace(config.Host))
             throw new TvControlException(LocalizationService.Get("TvHostMissing"));
         var (host, port) = AdbProtocol.ParseEndpoint(config.Host);
-
-        try
-        {
-            return await AdbClient.ConnectAsync(host, port, approvalTimeout, ct);
-        }
-        catch (Exception ex) when (IsUnreachable(ex) && wakeOnLan && WakeOnLan.TryParseMac(config.MacAddress, out var mac))
-        {
-            // Deep standby: no network until the magic packet wakes the TV.
-            AppLog.Write($"TV: {host}:{port} sem resposta; enviando Wake-on-LAN");
-            await WakeOnLan.SendAsync(mac, ct);
-        }
-        catch (Exception ex) when (IsUnreachable(ex))
-        {
-            throw new TvControlException(LocalizationService.Get("TvUnreachable", host));
-        }
-
-        var deadline = DateTime.UtcNow + WakeWait;
-        while (true)
-        {
-            await Task.Delay(2000, ct);
-            try
-            {
-                return await AdbClient.ConnectAsync(host, port, approvalTimeout, ct);
-            }
-            catch (Exception ex) when (IsUnreachable(ex) && DateTime.UtcNow < deadline)
-            {
-                // Still booting; try again.
-            }
-            catch (Exception ex) when (IsUnreachable(ex))
-            {
-                throw new TvControlException(LocalizationService.Get("TvUnreachable", host));
-            }
-        }
+        return TvNetwork.ConnectAsync(config, wakeOnLan, token => AdbClient.ConnectAsync(host, port, approvalTimeout, token), ct);
     }
-
-    /// <summary>Nothing listening, no route, connect timeout or a TV that hung up mid-handshake.</summary>
-    private static bool IsUnreachable(Exception ex) => ex is SocketException or IOException;
 }
