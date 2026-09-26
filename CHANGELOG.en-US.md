@@ -2,6 +2,10 @@
 
 English (US) release notes, mirroring CHANGELOG.md (Brazilian Portuguese). Before publishing a version, add a `## [VERSION]` section to **both** files: the workflow publishes the section matching the tag from each one and fails if either is missing.
 
+## [Unreleased]
+### What's new
+- Settings → TV: console mode turns the TV on and switches it to the PC's HDMI input, and can put it in standby on restore. First route: Google TV / Android TV over the network (ADB), nothing to install on the PC. (#75)
+
 ## [1.5.0]
 ### What's new
 - Console interface: a full-screen, controller-first home and Settings, driven by the D-pad/stick and A/B with Xbox and PlayStation pads. Automatic mode picks it whenever a controller is connected. (#41, #42, #47)
