@@ -120,6 +120,16 @@ Pré-condições: TV Google TV / Android TV na mesma rede do PC, com **Depuraç�
 - [ ] TV que ignora a tecla HDMI: preencher **Comando da entrada** faz a troca funcionar. Resultado: ______
 - [ ] Escolher "Não controlar": os campos somem e nada é enviado à TV. Resultado: ______
 
+## 3e. Controle da TV: Home Assistant (issue #75)
+
+Pré-condições: Home Assistant acessível pelo PC; um script que liga a TV e troca a entrada; token de longa duração; Ajustes → TV → *Home Assistant* preenchido.
+
+- [ ] **Testar agora**: o script roda (histórico do Home Assistant) e a TV liga na entrada do PC. Resultado: ______
+- [ ] O `config.json` guarda o token começando com `dpapi:` (não em texto puro); reabrir o app mostra o token (mascarado) e o teste continua funcionando. Resultado: ______
+- [ ] Token errado: o status diz que o Home Assistant recusou o token. Entidade inexistente: diz que não encontrou a entidade. Endereço errado: diz que não respondeu. Resultado: ______
+- [ ] **Jogar agora**: o script roda antes das telas mudarem; o log tem `TV: Home Assistant script.turn_on ... → 200`. Resultado: ______
+- [ ] "Colocar a TV em espera ao restaurar" com entidade de restauração: ela roda depois que a mesa volta. Sem entidade de restauração e entidade inicial `media_player`: roda `media_player.turn_off`. Com script como entidade inicial e sem a de restauração: nada acontece (log explica). Resultado: ______
+
 ## 4. Regressões
 
 - [ ] Interface Desktop: mapa de telas, `Segmented`, chips, tour de 3 passos e Ajustes continuam como antes. Resultado: ______
