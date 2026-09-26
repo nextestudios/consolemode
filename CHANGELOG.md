@@ -5,7 +5,7 @@ Notas em português do Brasil; a versão em inglês (Estados Unidos) fica em `CH
 ## [Unreleased]
 ### Novidades
 - Ajustes → TV: o modo console liga a TV e troca para a entrada HDMI do PC, e pode colocá-la em espera ao restaurar. Primeiro caminho: Google TV / Android TV pela rede (ADB), sem instalar nada no PC. (#93)
-- Controle da TV pelo Home Assistant: roda um script, cena, automação ou media_player ao entrar e ao restaurar, com o token guardado criptografado. (#75)
+- Controle da TV pelo Home Assistant: roda um script, cena, automação ou media_player ao entrar e ao restaurar, com o token guardado criptografado. (#95)
 
 ## [1.5.0]
 ### Novidades
