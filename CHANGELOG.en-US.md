@@ -5,7 +5,7 @@ English (US) release notes, mirroring CHANGELOG.md (Brazilian Portuguese). Befor
 ## [Unreleased]
 ### What's new
 - Settings → TV: console mode turns the TV on and switches it to the PC's HDMI input, and can put it in standby on restore. First route: Google TV / Android TV over the network (ADB), nothing to install on the PC. (#93)
-- TV control for LG webOS too: powers on with Wake-on-LAN and switches input over the network, pairing the first time. (#75)
+- TV control for LG webOS too: powers on with Wake-on-LAN and switches input over the network, pairing the first time. (#94)
 
 ## [1.5.0]
 ### What's new
