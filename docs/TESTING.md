@@ -120,6 +120,17 @@ Pré-condições: TV Google TV / Android TV na mesma rede do PC, com **Depuraç�
 - [ ] TV que ignora a tecla HDMI: preencher **Comando da entrada** faz a troca funcionar. Resultado: ______
 - [ ] Escolher "Não controlar": os campos somem e nada é enviado à TV. Resultado: ______
 
+## 3d. Controle da TV: LG webOS (issue #75)
+
+Pré-condições: TV LG webOS na mesma rede, com "Ligar via Wi-Fi" (ou "LG Connect Apps") ativo; Ajustes → TV → *LG webOS* com IP, MAC e a entrada HDMI do PC.
+
+- [ ] **Testar agora** com a TV ligada: aparece o pedido de autorização; ao aceitar, a TV troca para a entrada do PC. Um arquivo `webos-<ip>.key` aparece na pasta de dados. Resultado: ______
+- [ ] **Testar agora** de novo: não pede mais autorização. Resultado: ______
+- [ ] Com a TV em espera: o log mostra `enviando Wake-on-LAN`, a TV liga e troca a entrada. Resultado: ______
+- [ ] Recusar o pedido na TV: o status explica que a TV não autorizou. Resultado: ______
+- [ ] Firmware novo (só `wss://3001`): a conexão cai para a porta segura e funciona. Resultado: ______
+- [ ] "Colocar a TV em espera ao restaurar": a TV desliga depois que a mesa volta. Resultado: ______
+
 ## 4. Regressões
 
 - [ ] Interface Desktop: mapa de telas, `Segmented`, chips, tour de 3 passos e Ajustes continuam como antes. Resultado: ______
