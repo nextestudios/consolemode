@@ -5,6 +5,7 @@ English (US) release notes, mirroring CHANGELOG.md (Brazilian Portuguese). Befor
 ## [Unreleased]
 ### What's new
 - Settings → TV: console mode turns the TV on and switches it to the PC's HDMI input, and can put it in standby on restore. First route: Google TV / Android TV over the network (ADB), nothing to install on the PC. (#93)
+- TV control through a Pulse-Eight USB-CEC adapter (libCEC): powers on, switches input and puts any HDMI-CEC TV in standby. (#75)
 
 ## [1.5.0]
 ### What's new

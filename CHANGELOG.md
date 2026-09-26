@@ -5,6 +5,7 @@ Notas em português do Brasil; a versão em inglês (Estados Unidos) fica em `CH
 ## [Unreleased]
 ### Novidades
 - Ajustes → TV: o modo console liga a TV e troca para a entrada HDMI do PC, e pode colocá-la em espera ao restaurar. Primeiro caminho: Google TV / Android TV pela rede (ADB), sem instalar nada no PC. (#93)
+- Controle da TV por adaptador USB-CEC da Pulse-Eight (libCEC): liga, troca a entrada e coloca em espera qualquer TV com HDMI-CEC. (#75)
 
 ## [1.5.0]
 ### Novidades

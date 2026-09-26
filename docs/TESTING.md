@@ -120,6 +120,16 @@ Pré-condições: TV Google TV / Android TV na mesma rede do PC, com **Depuraç�
 - [ ] TV que ignora a tecla HDMI: preencher **Comando da entrada** faz a troca funcionar. Resultado: ______
 - [ ] Escolher "Não controlar": os campos somem e nada é enviado à TV. Resultado: ______
 
+## 3f. Controle da TV: adaptador USB-CEC (issue #75)
+
+Pré-condições: adaptador Pulse-Eight USB-CEC entre o PC e a TV, libCEC instalado, CEC ativo na TV; Ajustes → TV → *Adaptador USB-CEC* com a entrada HDMI do PC.
+
+- [ ] O card "cec-client" mostra o caminho encontrado; sem libCEC, mostra que não encontrou. Resultado: ______
+- [ ] **Testar agora** com a TV em espera: ela liga e troca para a entrada do PC. Resultado: ______
+- [ ] Adaptador desconectado do USB: o status diz que o adaptador não foi encontrado. Resultado: ______
+- [ ] **Jogar agora**: a TV liga antes das telas mudarem; o log tem `TV: cec-client "on 0" → 0` e `"as" → 0`. Resultado: ______
+- [ ] "Colocar a TV em espera ao restaurar": `standby 0` depois que a mesa volta. Resultado: ______
+
 ## 4. Regressões
 
 - [ ] Interface Desktop: mapa de telas, `Segmented`, chips, tour de 3 passos e Ajustes continuam como antes. Resultado: ______
